@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dignity, Healing & Hope | Efoyita Refugee Support Initiative</title>
+<style>
+:root{--primary:#0a5c53;--accent:#e07a5f;--dark:#2d3748;--light:#f7fafc}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;color:#2d3748;background:var(--light)}
+a{color:inherit;text-decoration:none}ul{list-style:none}img{max-width:100%}
+header{position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:.9rem 5%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.logo a{font-size:1.05rem;color:var(--primary)}.logo strong{font-size:1.4rem;color:var(--accent)}
+nav ul{display:flex;align-items:center;gap:1.4rem}
+nav a{font-weight:500;padding:.3rem 0;transition:color .2s}nav a:hover{color:var(--accent)}
+.btn-donate{background:var(--accent);color:#fff;padding:.5rem 1.1rem!important;border-radius:999px}.btn-donate:hover{background:var(--primary);color:#fff}
+.hero{min-height:75vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 8%;color:#fff;background:linear-gradient(rgba(10,60,55,.6),rgba(10,60,55,.6)),url("images/hero.jpg") center/cover}
+.hero h1{font-size:clamp(1.9rem,5vw,3.2rem);max-width:800px;margin-bottom:1rem}.hero p{font-size:1.3rem;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:.8rem 1.8rem;border-radius:8px;font-weight:600;transition:transform .2s,background .2s}.btn:hover{background:var(--accent);transform:translateY(-2px)}
+.hero .btn{background:var(--accent)}.hero .btn:hover{background:#fff;color:var(--primary)}
+.btn-alt{display:inline-block;border:2px solid #fff;color:#fff;padding:.8rem 1.8rem;border-radius:8px;font-weight:600;transition:.2s}.btn-alt:hover{background:#fff;color:var(--primary)}
+section{padding:4rem 8%;text-align:center}
+section h2{font-size:2rem;color:var(--primary);margin-bottom:1.5rem}section h3{color:var(--primary);margin-bottom:.6rem}
+.mission-vision,.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+article{background:#fff;padding:1.8rem;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.07);text-align:left;border-top:4px solid var(--accent)}
+article ul{list-style:disc;padding-left:1.2rem}
+.news-readmore{display:inline-block;margin-top:.8rem;color:var(--accent);font-weight:600}
+#impact-stats{background:var(--primary);color:#fff}#impact-stats h2{color:#fff}
+.stat-grid div{padding:1rem}.stat-grid strong{display:block;font-size:2.4rem;color:#ffd8a8}
+.card,.card2{max-width:900px;margin:2rem auto;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.card2{background:#e6f4f1}.card{background:#fff}
+.content-page .grid{max-width:600px;margin:0 auto}
+.form-group input:focus,.form-group textarea:focus{outline:2px solid var(--primary)}
+@media(max-width:768px){section{padding:3rem 5%}}
+html{scroll-behavior:smooth}section{scroll-margin-top:80px}
+.menu-btn{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer}
+.dropdown{position:relative}.submenu{display:none;position:absolute;top:100%;left:0;min-width:240px;background:#fff;box-shadow:0 6px 16px rgba(0,0,0,.15);border-radius:8px;padding:.5rem 0;z-index:50;flex-direction:column}
+.submenu li{display:block}.submenu a{display:block;padding:.6rem 1rem;white-space:nowrap}
+.dropdown:hover .submenu,.dropdown.open .submenu{display:flex}
+nav a.active{font-weight:bold;border-bottom:2px solid #e07a5f}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.gallery figure{margin:0;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.12)}.gallery img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .3s}.gallery figure:hover img{transform:scale(1.06)}.gallery figcaption{padding:.6rem;text-align:center;font-weight:600}
+.faq{max-width:800px;margin:0 auto}.faq details{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:1rem;margin-bottom:.8rem}.faq summary{cursor:pointer;font-weight:600}.faq p{margin-top:.6rem;color:#4a5568}
+.form-group{text-align:left;margin-bottom:1.2rem}.form-group label{display:block;font-weight:600;margin-bottom:.5rem}.form-group input,.form-group textarea{width:100%;padding:.75rem;border:1px solid #cbd5e0;border-radius:8px}
+@media(max-width:768px){header{flex-wrap:wrap}.menu-btn{display:block}nav{display:none;width:100%}nav.open{display:block}nav ul{flex-direction:column;align-items:flex-start;gap:.5rem}.submenu{position:static;box-shadow:none;padding-left:1rem}.dropdown.open .submenu{display:flex}.stat-grid,.mission-vision{grid-template-columns:1fr}}
+.gcarousel{position:relative;max-width:850px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.2);background:#000}
+.gtrack{position:relative;aspect-ratio:5/3}
+.gslide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .6s}.gslide.active{opacity:1}
+.gslide img{width:100%;height:100%;object-fit:cover;display:block}
+.gslide figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.5rem 1rem 1rem;color:#fff;font-weight:600;font-size:1.1rem;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.gprev,.gnext{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;border-radius:50%;background:rgba(255,255,255,.85);font-size:1.2rem;cursor:pointer;z-index:2}.gprev{left:12px}.gnext{right:12px}
+.gprev:hover,.gnext:hover{background:#fff}
+.gdots{position:absolute;bottom:10px;right:14px;display:flex;gap:6px;z-index:2}
+.gdot{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.5);cursor:pointer}.gdot.active{background:#e07a5f}
+.logo a{display:flex;align-items:center;gap:.6rem}.logo img{height:52px;width:52px;object-fit:contain;border-radius:50%}
+</style>
+<link rel="icon" href="images/logo.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+<header><div class="logo"><a href="index.html"><img src="images/logo.jpg" alt="ERSI logo"><span><strong>ERSI</strong> | Efoyita Refugee Support Initiative</span></a></div>
+<button class="menu-btn" aria-label="Menu">&#9776;</button>
+<nav><ul><li><a href="index.html" class="active">Home</a></li><li><a href="about.html">About Us</a></li><li class="dropdown"><a href="#" class="dd-toggle">Programs &#9662;</a><ul class="submenu"><li><a href="psychosocial.html">Psychosocial Support</a></li><li><a href="education.html">Education & Youth</a></li><li><a href="livelihood.html">Livelihood & Women's Protection</a></li></ul></li><li><a href="gallery.html">Gallery</a></li><li><a href="faq.html">FAQ</a></li><li><a href="get-involved.html#volunteer">Get Involved</a></li><li><a href="contact.html">Contact</a></li><li><a href="get-involved.html#donate" class="btn-donate">Donate Now</a></li></ul></nav></header>
+<main>
+<section id="home" class="hero"><h1>Empowering refugees with dignity, healing, and hope.</h1><p>Together, we restore lives.</p>
+<div class="hero-btns"><a href="get-involved.html#donate" class="btn">Donate Now</a><a href="get-involved.html#volunteer" class="btn-alt">Become a Volunteer</a></div></section><section id="impact-stats"><h2>Our Global Impact</h2><div class="stat-grid">
+<div data-aos="zoom-in"><strong>1,000+</strong><p>Refugees supported with food & essentials</p></div>
+<div data-aos="zoom-in"><strong>500+</strong><p>Children benefiting from education</p></div>
+<div data-aos="zoom-in"><strong>300+</strong><p>Women trained in livelihood skills</p></div>
+<div data-aos="zoom-in"><strong>600+</strong><p>Beneficiaries reached annually</p></div></div></section><section><h2>What We Do</h2><div class="mission-vision"><article data-aos="fade-up"><h3>Psychosocial Support</h3><p>We provide trauma-informed healing groups, counseling sessions and safe communal spaces for recovery and growth.</p><a href="psychosocial.html" class="news-readmore">Learn more &rarr;</a></article><article data-aos="fade-up"><h3>Education & Youth</h3><p>Youth gain access to learning materials, mentorship and core computer literacy skills.</p><a href="education.html" class="news-readmore">Learn more &rarr;</a></article><article data-aos="fade-up"><h3>Livelihood & Women's Protection</h3><p>Displaced women build independence through tailoring, business training and savings circles.</p><a href="livelihood.html" class="news-readmore">Learn more &rarr;</a></article></div></section>
+</main>
+<footer style="text-align:center;padding:2rem;background:#2d3748;color:#fff"><p>&copy; 2026 Efoyita Refugee Support Initiative (ERSI). All rights reserved.</p></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+const b=document.querySelector(".menu-btn"),n=document.querySelector("nav");
+b&&b.addEventListener("click",()=>n.classList.toggle("open"));
+document.querySelectorAll(".dd-toggle").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();a.parentElement.classList.toggle("open")}));
+if(window.AOS)AOS.init({duration:700,once:true});});
+
+document.addEventListener("DOMContentLoaded",()=>{
+document.querySelectorAll("nav a:not(.dd-toggle)").forEach(a=>a.addEventListener("click",()=>{document.querySelector("nav").classList.remove("open");document.querySelectorAll(".dropdown").forEach(d=>d.classList.remove("open"))}));
+const f=document.getElementById("contactForm"),r=document.getElementById("formResult");
+f&&f.addEventListener("submit",async e=>{e.preventDefault();r.textContent="Sending...";
+try{const res=await fetch(f.action,{method:"POST",body:new FormData(f)});const j=await res.json();
+r.textContent=j.success?"Thank you! Your message has been sent.":"Something went wrong. Please try again.";if(j.success)f.reset()}
+catch(err){r.textContent="Network error. Please try again."}});});
+(()=>{const c=document.querySelector(".gcarousel");if(!c)return;
+const s=[...c.querySelectorAll(".gslide")],d=[...c.querySelectorAll(".gdot")];let i=0,t,x0=null;
+const go=n=>{i=(n+s.length)%s.length;s.forEach((e,k)=>e.classList.toggle("active",k==i));d.forEach((e,k)=>e.classList.toggle("active",k==i))};
+const auto=()=>{clearInterval(t);t=setInterval(()=>go(i+1),4000)};
+c.querySelector(".gprev").onclick=()=>{go(i-1);auto()};c.querySelector(".gnext").onclick=()=>{go(i+1);auto()};
+d.forEach((e,k)=>e.onclick=()=>{go(k);auto()});
+c.addEventListener("touchstart",e=>x0=e.touches[0].clientX);
+c.addEventListener("touchend",e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));auto()}x0=null});
+auto()})();
+</script>
+</body>
+</html>
